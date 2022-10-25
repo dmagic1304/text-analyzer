@@ -24,3 +24,23 @@ function numberOfOccurrencesInText(word, text) {
   return wordCount;               // else return = 0
   });
 }
+function omitBadWords(text) {
+  // convert text to an array of items
+  const textArray = text.split(" ");
+
+  // declare a variable set equal to the bad word
+  const badWordArray =  ["zoinks","muppeteer"," biffaroni","loopdaloop"];
+ const displayArray = [ ];
+  // compare the text array to the bad word
+  textArray.forEach(function(element){
+    if (!(element.toLowerCase().includes(badWordArray.toLowerCase()))){
+        // console.log("Look at this offensive word I found!: " + badWord);
+        let display = displayArray.push(element);
+        return display;
+    }
+  });
+
+  // if there's a match, omit the bad word (.remove()) .concat or .push
+  // rejoin the text array and display it
+
+}

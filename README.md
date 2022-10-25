@@ -90,6 +90,31 @@ const word = "Red";
 numberOfOccurrencesInText(word, text);
 Expected Output: 3
 
+Describe: omitBadWords(text);
+
+Test: "It should identify if there is an offensive word "zoinks"
+Code:
+cosnt badWord = "zoinks";
+const text = "zoinks and among other words as a sample string";
+omitBadWords(text);
+Expected Output: console.log("Look at this offensive word I found!: " + badWord);
+
+
+Test: "It should omit any offensive words in the badWordArray
+Code: omitBadWords()
+const text = "zoinks and among other words as a sample string";
+badWordArray =  ["zoinks","muppeteer"," biffaroni","loopdaloop"];
+omitBadWords(text);
+Expected Output: "and among other words as a sample string"
+
+
+Test: "It should omit the offensive words: zoinks, muppeteer, biffaroni, and loopdaloop."
+Code:
+const text = "zoinks, muppeteer, biffaroni, and loopdaloop among other words as a sample string";
+const word = "sample";
+omitBadWords(text);
+Expected Output: "and among other words as a sample string"
+
 ## Setup/Installation Requirements
 
 * Clone this repo to your workspace.
