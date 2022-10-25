@@ -104,6 +104,7 @@ Test: "It should omit any offensive words in the badWordArray
 Code: omitBadWords()
 const text = "zoinks and among other words as a sample string";
 badWordArray =  ["zoinks","muppeteer"," biffaroni","loopdaloop"];
+const displayArray = [];
 omitBadWords(text);
 Expected Output: "and among other words as a sample string"
 

@@ -29,13 +29,14 @@ function omitBadWords(text) {
   const textArray = text.split(" ");
 
   // declare a variable set equal to the bad word
-  const badWordArray =  ["zoinks","muppeteer"," biffaroni","loopdaloop"];
+  const badWordArray =  "zoinks"; //,"muppeteer"," biffaroni","loopdaloop"];
  const displayArray = [ ];
   // compare the text array to the bad word
   textArray.forEach(function(element){
-    if (!(element.toLowerCase().includes(badWordArray.toLowerCase()))){
+    if (element.toLowerCase().includes(badWordArray.toLowerCase())){
         // console.log("Look at this offensive word I found!: " + badWord);
         let display = displayArray.push(element);
+        console.log("Display & displayArray rez: ", displayArray, display)
         return display;
     }
   });
